@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="styles/main.css")}}">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Home</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+    <div class="aquamarine-field">
+            <p style="font-family: Signika, sans-serif; font-size: 20px;"</p>
+        <a href="/index">Home</a>
+                <a href="/info">Info</a>
+    </div>
+    <div>
+        {% block content %} 
+
+        {% endblock %}
+    </div>
+    
+</body>
+</html>

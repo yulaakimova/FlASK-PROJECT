@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if user_name %}
+    <h1>Hello: {{ user_name }} {{ user_surname }}</h1>
+    {% else %}
+    <div>
+            <p style="font-family: Signika, sans-serif; font-size: 30px;">Please enter user_name:</p>
+    </div>         
+    {% endif %}    
+        <form method="POST"> 
+            {{ form.csrf_token }}
+            {{ form.userNameField }}
+            {{ form.userSurNameField }}
+            <input type="submit">
+
+        </form>
+    
+{% endblock %}
