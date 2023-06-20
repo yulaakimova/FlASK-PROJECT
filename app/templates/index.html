@@ -7,7 +7,13 @@
     <div>
             <p style="font-family: Signika, sans-serif; font-size: 30px;">Please enter user_name:</p>
     </div>         
-    {% endif %}    
+    {% endif %}
+    
+        {% for user in users %}
+            {{user.name}}
+            {{user.surname}}
+            <br>
+        {% endfor %}
         <form method="POST"> 
             {{ form.csrf_token }}
             {{ form.userNameField }}
@@ -15,5 +21,5 @@
             <input type="submit">
 
         </form>
-    
+        
 {% endblock %}
